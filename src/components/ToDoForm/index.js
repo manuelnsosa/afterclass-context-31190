@@ -81,15 +81,15 @@ const ToDoForm = () => {
         </form>
       )}
       {!showForm && (
-        <div className='flex items-center justify-between'>
+        <div className='h-screen w-full flex items-center justify-center'>
           <Link
             to='/todos'
-            className='bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline'
+            className='bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline mr-10'
           >
             <button>Go to to-do list</button>
           </Link>
           <button
-            className='bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline'
+            className='bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline ml-10'
             onClick={() => setShowForm(true)}
           >
             Add new to-do
