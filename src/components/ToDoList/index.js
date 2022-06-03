@@ -4,8 +4,8 @@ const ToDoList = () => {
   const { todos, removeToDo, updateStatusToDo } = useContext(ToDoContext);
   return (
     <>
-      {todos.length > 0 && (
-        <div className='flex items-center justify-center'>
+      <div className='flex items-center justify-center'>
+        {todos.length > 0 && (
           <ul>
             <div className='container mx-auto px-4 sm:px-8 max-w-3xl'>
               <div className='py-8'>
@@ -91,7 +91,10 @@ const ToDoList = () => {
                               </span>
                             </td>
                             <td className='px-5 py-5 border-b border-gray-200 bg-white text-sm'>
-                              <button onClick={() => removeToDo(todo.id)}>
+                              <button
+                                className='px-4 py-2  text-base rounded-full text-red-600 border border-red-600 bg-red-200'
+                                onClick={() => removeToDo(todo.id)}
+                              >
                                 Remove
                               </button>
                             </td>
@@ -104,8 +107,14 @@ const ToDoList = () => {
               </div>
             </div>
           </ul>
-        </div>
-      )}
+        )}
+        {todos.length === 0 && (
+          <img
+            src='https://cdn.dribbble.com/users/898770/screenshots/3744292/search-bar.gif'
+            alt='nothing'
+          />
+        )}
+      </div>
     </>
   );
 };
